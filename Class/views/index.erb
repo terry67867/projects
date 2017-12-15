@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+  <head>
+    <img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/explorer.jpeg" />
+    <meta charset="utf-8" />
+    <title>블로그</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,700|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="welcome">
+      <h1>블로그에 온걸 환영해</h1>
+    </div>
+    <a href="/new"> 글 써줘</a>
+    <hr />
+    <% @posts.each do |p| %>
+      <p><%=p.id%></p>
+      <p><%=p.title%></p>
+      <p><%=p.content%></p>
+      <p><%=p.created_at%></p>
+      <!--/posts/1-->
+      <!--/posts/2...-->
+      <a href="/posts/<%= p.id %>">글보러가기</a>
+      <a href="/destroy/<%= p.id %>">삭제하기</a>
+      <a href="/edit/<%= p.id %>">수정하기</a>
+<!--  <a href=<%="/posts/#{p.id}"%>>글보러가기</a>  -->
+    <%end%>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>게시판에 오신것을 환영합니다.</title>
+  </head>
+  <body>
+    <hr />
+      작성자:<%= @post.id%><br />
+      제목:<%= @post.title %><br />
+      내용:<%= @post.content %><br />
+      작성시간:<%= @post.created_at %><br />
+      <a href="/">홈으로가기</a><br />
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>환영합니다.</title>
+  </head>
+  <body>
+    <h2>게시판</h2><br/>
+    <a href = '/new'>글 쓰러가기</a><br/>
+    <hr />
+      <%@post.each do |p|%>
+        <p><%= p.id %></p>
+        <p><%= p.title %></p>
+        <p><%= p.content %></p>
+        <p><%= p.created_at %></p>
+        <a href = '/edit/<%=p.id%>'>글 수정하기</a><br/>
+        <a href = '/destroy/<%=p.id%>'>글 삭제하기</a><br/>
+      <%end%>
+    <hr />
+  </body>
+</html>

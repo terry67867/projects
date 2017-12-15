@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title> 소재정보 검색 및 자동저장확인 </title>
+  </head>
+  <body>
+    <h2>소재정보 검색 및 자동저장이 되었습니다.</h2><br />
+    입력된 소재이름 : <%=@materialName%><br />
+    소재 분류 : <%=@elementType%><br />
+    원자량 : <%=@atomWeight%><br />
+    밀도 : <%=@density%><br />
+    녹는점 : <%=@meltingPoint%><br />
+    끓는점 : <%=@boilingPoint%><br />
+    삼중점 : <%=@triplePoint%><br />
+    용해도 : <%=@heatOfDissolution%><br />
+    기화열 : <%=@evaporationHeat%><br />
+    열용량 : <%=@heatCapacity%><br />
+    전기음성도 : <%=@electroNegativity%><br />
+    이온화에너지 : <%=@ionizationEnergy%><br />
+    원자반지름 : <%=@atomRadius%><br />
+    <hr />
+    <!--역사 : <%=@history%>-->
+    <a href="/"> 홈으로 가기 </a><br />
+    <a href="/resultPage"> 정보 저장페이지로 가기 </a><br />
+  </body>
+</html>

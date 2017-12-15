@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>게시판에 오신것을 환영합니다.</title>
+  </head>
+  <body>
+    <a href="/new">글 쓰러가기</a><br />
+    <hr />
+    <%@posts.each do |p|%>
+      작성자 : <p><%=p.id%></p><br />
+      제목 : <p><%=p.title%></p><br />
+      내용 : <p><%=p.content%></p><br />
+      작성시간 : <p><%=p.created_at%></p><br />
+      <a href="/edit/:id">글 수정하기</a><br />
+      <a href="/destroy/:id">글 삭제하기</a><br />
+    <%end%>
+    <hr />
+      <form action="/posts">
+        <input name="title" type="text" placeholder="검색할 아이디" /><br />
+        <input type="submit" value="검색" /><br />
+      </form>
+    <hr />
+  </body>
+</html>

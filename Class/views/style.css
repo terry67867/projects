@@ -1,0 +1,12 @@
+h2{
+  font-style: Georgia;
+}
+
+.welcome {
+  font-style: Georgia;
+  background-color: #DBE9EE;
+  box-sizing: border-box;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+}
